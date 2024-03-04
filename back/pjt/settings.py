@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'accounts',
     'chats',
     'posts',
+    'allauth',
+    'allauth.account',
     'rest_framework.authtoken',
 
     'django.contrib.admin',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
